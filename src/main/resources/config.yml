@@ -1,0 +1,10 @@
+#               HikariAntiAd by AdeksPL
+# Plugin stworzony w celu zablokowania reklam innych serwerow i nie tylko
+#
+# Poniżej przedstawiam najpoprawniejsza konfiguracje tego pluginu
+
+
+NoAdMessage: "&8[&aHikariAntiAd&8] &cNie reklamuj ani nie uzywaj zakow specjalnych!"
+InfoMessage: "&c&m----------&f    &8[&cHikariAntiAd&8]    &c&m----------\n&7 &7\nSpis &aFILTROW&7 oraz &aSEARCHEROW&7\nFiltry: &c%filters%&7\nSearchery:&c %searchers%\n&7 &7\n&c&m----------&f    &8[&cHikariAntiAd&8]    &c&m----------"
+NoPermission: "&8[&aHikariAntiAd&8] &c&nNie masz permisji do (&8&nhikari.%command%&c&n)"
+AdminSeeMessage: "&8[&aHikariAntiAd&8] &7Gracz &c%player%&7 jest podejrzany o &cREKLAME&7!\n&8[&aHikariAntiAd&8] &7Napisal on wiadomosc:&a %message%"

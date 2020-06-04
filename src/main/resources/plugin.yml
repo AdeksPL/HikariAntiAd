@@ -1,0 +1,5 @@
+name: HikariAntiAd
+main: pl.hikaricode.adeks.antiad.basic.AntiAd
+version: 1.0-SNAPSHOT
+description: Plugin stworzony by zabezpieczyc dany serwis przed reklama innych serwisow
+author: AdeksPL
