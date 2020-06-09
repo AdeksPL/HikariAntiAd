@@ -15,7 +15,7 @@ public class AntiAdListeners implements Listener {
     // ten kod dalo by sie skrocic ale jestem leniem, pa
     @EventHandler
     public void onChat(AsyncPlayerChatEvent e){
-
+        if(e.getPlayer().hasPermission("hikari.ad")) return;
 
         for(Checker c:Checker.getCheckers()){
             if(!c.getTypes().contains("chat")) continue;
@@ -29,11 +29,14 @@ public class AntiAdListeners implements Listener {
                                 .replaceAll("%message%", e.getMessage())
                                 .replaceAll("%player%", e.getPlayer().getName())
                         ));
+                return;
             }
         }
     }
     @EventHandler
     public void onAnvilRename(InventoryClickEvent e){
+        if(e.getWhoClicked().hasPermission("hikari.ad")) return;
+
         if(!(e.getInventory() instanceof AnvilInventory)) {
             return;
         }
@@ -50,11 +53,14 @@ public class AntiAdListeners implements Listener {
                                 .replaceAll("%message%", e.getCurrentItem().getItemMeta().getDisplayName())
                                 .replaceAll("%player%", e.getWhoClicked().getName())
                         ));
+                return;
             }
         }
     }
     @EventHandler
     public void onCommand(PlayerCommandPreprocessEvent e){
+        if(e.getPlayer().hasPermission("hikari.ad")) return;
+
         for(Checker c:Checker.getCheckers()){
             if(!c.getTypes().contains("command")) continue;
             if(c.isAd(e.getMessage())){
@@ -67,6 +73,7 @@ public class AntiAdListeners implements Listener {
                                 .replaceAll("%message%", e.getMessage())
                                 .replaceAll("%player%", e.getPlayer().getName())
                         ));
+                return;
             }
         }
     }

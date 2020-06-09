@@ -37,13 +37,11 @@ public class Checker {
             Filter f = Filter.getFilter(filter);
             ad = f.use(ad);
         }
-
-        boolean check = false;
         for(String sear:searchers){ // nie ma spacji po for ani przed nawiasem
             Searcher s = Searcher.getSearcher(sear);
-            check = check || s.isAd(ad,ads);
+             if(s.isAd(ad,ads)) return true;
         }
-        return check;
+        return false;
     }
 
     @Getter

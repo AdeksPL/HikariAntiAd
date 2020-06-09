@@ -107,6 +107,7 @@ public class AntiAd extends JavaPlugin {
         List<String> types = new ArrayList<String>();
         types.add("chat");
         types.add("command");
+        types.add("anvil");
 
         c.set("filters", filters);
         c.set("searchers", searchers);
@@ -116,6 +117,38 @@ public class AntiAd extends JavaPlugin {
             c.save(f);
         }catch (Exception ignored){}
     }
+
+    private void example4Load() {
+        File f = new File("plugins/"+AntiAd.getPlugin().getDataFolder().getName()+"/examples/ADEKSChecker.adeks");
+        YamlConfiguration c = YamlConfiguration.loadConfiguration(f);
+
+        List<String> filters = new ArrayList<String>();
+        filters.add("EASY");
+        List<String> searchers = new ArrayList<String>();
+        searchers.add("LCS");
+        List<String> ads = new ArrayList<String>();
+        ads.add("serwercoremaxpl");
+        ads.add("coremaxplserwer");
+        ads.add("servercoremaxpl");
+        ads.add("coremaxplserver");
+        ads.add("wbijcienacoremaxpl");
+        ads.add("serwermegaxcorepl");
+        ads.add("megaxcoreserwer");
+        ads.add("servermegaxcorepl");
+        ads.add("megaxcoreserver");
+        List<String> types = new ArrayList<String>();
+        types.add("chat");
+        types.add("command");
+
+        c.set("filters", filters);
+        c.set("searchers", searchers);
+        c.set("ads", ads);
+        c.set("types", types);
+        try {
+            c.save(f);
+        }catch (Exception ignored){}
+    }
+
 
     public void onEnable(){
 
@@ -148,6 +181,7 @@ public class AntiAd extends JavaPlugin {
         this.example1Load();
         this.example2Load();
         this.example3Load();
+        this.example4Load();
 
         for(String file: Objects.requireNonNull(folder.list())){
             Checker.getCheckerList().add(new Checker(file));

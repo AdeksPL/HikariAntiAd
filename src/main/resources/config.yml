@@ -1,8 +1,20 @@
+#----------------------------------------------------------------------------
 #               HikariAntiAd by AdeksPL
 # Plugin stworzony w celu zablokowania reklam innych serwerow i nie tylko
+#----------------------------------------------------------------------------
 #
-# Poniżej przedstawiam najpoprawniejsza konfiguracje tego pluginu
-
+# Poniżej przedstawiam moja konfiguracje tego pluginu (Bez zadnych dodatkow) z folderu examples skopiujcie pliki do checkers
+# Mozecie pisac wlasne checkery ale jest ryzyko ze antyreklama bedzie dzialac w zly sposob wiec zalecane jest zebyscie korzystali z tych
+# W checkerze EASYCHECKER zapisuje sie same ip serwera oraz czesci danego IP, jest to checker który bada chat oraz komendy, korzysta z Searchera EASY wiec slabiej wykrywa reklame od LCS
+# W checkerze ADEKSCHECKER zapisuje sie wiadomosci lub ich czesci jakimi gracze reklamuja/moga reklamowac ip danego serwera, jesli podamy nie cale ip serwera badz wiadomosc bedzie zbyt krotka
+# moze blokowac ona pisanie na chacie przez zwyklych graczy (wiadomosci nie bedachch reklama), wiec jesli chcecie wprowadzac to wprowadzajcie tam dluzsze nazwy ip serwera+jakas czesc wiadomosci
+# Okolo 10/20 znakow
+# W checkerze LCSChecker mozecie wprowadzac ip serwerow lub ich czesci mimo ze korzysta on z algorytmu LCS tak jak powyzszy, checker ten zabrania nazywania nieprawidlowo itemow w kowadle
+# SPECIALChecker blokuje uzywanie znakow specjalnych
+#
+# Gracz ktory ma permisje "hikari.ad" ,ma permisje do reklamowania (A wiec pisania na chacie tego co chce)
+# Aby uzyc komende /adinfo trzeba miec permisje "hikari.adinfo"
+# Permisja do widzenia czy ktoś reklamuje: "hikari.seead"
 
 NoAdMessage: "&8[&aHikariAntiAd&8] &cNie reklamuj ani nie uzywaj zakow specjalnych!"
 InfoMessage: "&c&m----------&f    &8[&cHikariAntiAd&8]    &c&m----------\n&7 &7\nSpis &aFILTROW&7 oraz &aSEARCHEROW&7\nFiltry: &c%filters%&7\nSearchery:&c %searchers%\n&7 &7\n&c&m----------&f    &8[&cHikariAntiAd&8]    &c&m----------"

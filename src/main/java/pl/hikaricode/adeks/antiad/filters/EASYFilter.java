@@ -14,6 +14,6 @@ public class EASYFilter extends Filter {
         reklama = reklama.toLowerCase();
         StringBuilder clear = new StringBuilder();
         for(char c: reklama.toCharArray()) if(alfabet.contains(c+"")) clear.append(c);
-        return clear.toString();
+        return clear.toString();//.replaceAll("kropka", "").replaceAll("kropa", "").replaceAll("kropeczka", "").replaceAll("kropeczkunia", "");
     }
 }

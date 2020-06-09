@@ -13,7 +13,7 @@ import java.util.List;
         public boolean isAd(String msg, List<String> list) {
 
             // tak, dalo sie lepiej to zrobic lecz jestem leniem :)
-            String alphabet = "abcdefghijklmnoprstuwyzxqvABCDEFGHIJKLMNOPRSTUQWXYZV123456789łąęĄŁĘÓó!@#$%^&*()_+=-{}[]:|;\'\\<>?,./ `";
+            String alphabet = "\"abcdefghijklmnoprstuwyzxqvABCDEFGHIJKLMNOPRSTUQWXYZV0123456789łąęĄŁĘÓó!@#$%^&*()_+=-{}[]:|;\'\\<>?,./ `";
             int tmp = 1;
             for (char c:msg.toCharArray()){
                 if (!alphabet.contains(c+"")) return true;
